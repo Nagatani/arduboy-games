@@ -37,7 +37,7 @@ void loop() {
     }
     return;
   }
-  
+
   ab.clear();
 
   // フレームカウント開始
@@ -45,7 +45,7 @@ void loop() {
   // 秒数の計算
   sec = (double)fc / 60;
   msec = (double)fc * 1000 / 60;
-  
+
   ab.setCursor(0, 0);
   ab.print("Now, let's count 10s!");
   ab.setCursor(0, 8);
@@ -70,7 +70,7 @@ void loop() {
 // タイマーストップ
 void stop_timer() {
   stop_flag = true;
-  
+
   ab.setCursor(0, 24);
   ab.print("Result:");
   ab.setCursor(44, 24);
@@ -89,8 +89,8 @@ void stop_timer() {
   } else {
     ab.print("oh...");
   }
-  ab.setCursor(24, 56);
-  ab.print("Restart with A");
+  ab.setCursor(16, 56);
+  ab.print("Restart with [A]");
 }
 
 // ゲームリセット
@@ -107,13 +107,7 @@ void show_startscreen() {
   ab.clear();
   ab.setCursor(32, 24);
   ab.print("10sec Game");
-  ab.setCursor(24, 40);
-  ab.print("Start with A");
-  ab.setCursor(16, 48);
-  ab.print("and Stop with A");
-  ab.setCursor(24, 56);
-  ab.print("after 10 sec");
+  ab.setCursor(20, 40);
+  ab.print("Start with [A]");
   ab.display();
 }
-
-
